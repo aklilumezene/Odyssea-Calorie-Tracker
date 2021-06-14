@@ -1,4 +1,4 @@
-import "./MetricItem.css"
+import "./MealItem.css"
 
 const MealItem = (props) => {
     return <div className="meal-item">
