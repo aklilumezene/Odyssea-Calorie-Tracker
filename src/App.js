@@ -30,7 +30,7 @@ function App() {
       timestamp: new Date(2021, 4, 12, 8, 23, 0, 0),
       description: "100g Oats",
       meal: "Breakfast",
-      calorie: 386.8,
+      calorie: 0,
     }
   ]
 
