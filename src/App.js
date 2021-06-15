@@ -1,4 +1,4 @@
-import MealItem from "./components/MealItem"
+import Meals from "./components/Meals"
 
 function App() {
   const meals = [
@@ -37,11 +37,7 @@ function App() {
   return (
     <div>
       <h1>Hello React!</h1>
-      <MealItem calorie={meals[0].calorie} meal={meals[0].meal} description={meals[0].description} date={meals[0].timestamp} />
-      <MealItem calorie={meals[1].calorie} meal={meals[1].meal} description={meals[1].description} date={meals[1].timestamp} />
-      <MealItem calorie={meals[2].calorie} meal={meals[2].meal} description={meals[2].description} date={meals[2].timestamp} />
-      <MealItem calorie={meals[3].calorie} meal={meals[3].meal} description={meals[3].description} date={meals[3].timestamp} />
-      <MealItem calorie={meals[4].calorie} meal={meals[4].meal} description={meals[4].description} date={meals[4].timestamp} />
+      <Meals data = {meals}/>
     </div>
 
   );
