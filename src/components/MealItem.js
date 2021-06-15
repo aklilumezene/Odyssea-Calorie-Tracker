@@ -1,18 +1,19 @@
-import "./MealItem.css"
+import "./MealItem.css";
+import MealDate from "./MealDate";
 
 const MealItem = (props) => {
-    let dispDate = props.date.toLocaleString("en-US",
-    {hour: "2-digit", minute: "2-digit", hour12: false});
-    const dispCalorie = props.calorie === 0 ? "" : props.calorie;
-    
-    return <div className="meal-item">
-    <div className="meal-item__date">{dispDate}</div>
-    <div className="meal-item__meal">
+  const dispCalorie = props.calorie === 0 ? "" : props.calorie;
+
+  return (
+    <div className="meal-item">
+      <div className="meal-item__meal">
+        <MealDate date={props.date} />
         <div>{props.description}</div>
         <h3>{props.meal}</h3>
+      </div>
+      <div className="meal-item__calorie">{dispCalorie}</div>
     </div>
-    <div className="meal-item__calorie">{dispCalorie}</div>
-</div>
-}
+  );
+};
 
-export default MealItem
+export default MealItem;
