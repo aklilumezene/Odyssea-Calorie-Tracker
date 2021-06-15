@@ -1,7 +1,7 @@
 import "./MealItem.css"
 
 const MealItem = (props) => {
-    const dispDate = props.date.toLocalString("en-US",
+    let dispDate = props.date.toLocaleString("en-US",
     {hour: "2-digit", minute: "2-digit", hour12: false});
     const dispCalorie = props.calorie === 0 ? "" : props.calorie;
     
