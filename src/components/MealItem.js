@@ -1,6 +1,6 @@
 import "./MealItem.css";
 import MealDate from "./MealDate";
-import Card from "./UI/Card"
+import Card from "./UI/Card";
 
 const MealItem = (props) => {
   const dispCalorie = props.calorie === 0 ? "" : props.calorie;
