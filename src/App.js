@@ -35,8 +35,13 @@ function App() {
     }
   ]
 
+  const addedMealHandler = (meal) => {
+    console.log("added a new meal by someone ", meal)
+  }
+
   return (
     <div>
+      <AddMeal onAddMeal = {addedMealHandler} />
       <AddMeal />
       <Meals data = {meals}/>
     </div>

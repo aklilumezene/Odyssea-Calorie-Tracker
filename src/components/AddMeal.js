@@ -3,7 +3,8 @@ import MealForm from "./MealForm";
 
 const AddMeal = (props) => {
     const addedMealHandler = (meal) => {
-        console.log("A new metric given to be added ", meal)  
+        console.log("A new metric given to be added ", meal)
+          props.onAddMeal(meal)
     }
     return (
         <div className="add-meal">
