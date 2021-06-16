@@ -5,13 +5,13 @@ function App() {
   const meals = [
     {
       timestamp: new Date(2021, 4, 12, 12, 39, 0, 0),
-      description: "burger 100g",
+      description: "100g Burger",
       meal: "Lunch",
       calorie: 237.7,
     },
     {
       timestamp: new Date(2021, 4, 11, 9, 32, 0, 0),
-      description: "150g chicken soup",
+      description: "150g Chicken soup",
       meal: "Breakfast",
       calorie: 49.8,
     },
@@ -23,7 +23,7 @@ function App() {
     },
     {
       timestamp: new Date(2021, 4, 12, 13, 30, 0, 0),
-      description: "100g filet",
+      description: "100g Filet",
       meal: "Lunch",
       calorie: 272.6,
     },
