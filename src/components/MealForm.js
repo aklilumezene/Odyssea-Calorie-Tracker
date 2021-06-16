@@ -44,6 +44,8 @@ const MealForm = (props) => {
             calorie: userCalorie
          }
          console.log("My new meal: ", newMeal)
+         props.onAddMeal(newMeal)
+         
          console.log("Resetting form data")
          setUserDate("")
          setUserDescription("")
