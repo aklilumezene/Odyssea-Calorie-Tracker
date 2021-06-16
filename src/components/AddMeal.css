@@ -1,0 +1,38 @@
+.add-meal {
+    background-color: #d64161;
+    padding: 1rem;
+    margin: 0.5rem auto;
+    width: 50rem;
+    max-width: 95%;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  }
+  
+  .add-meal button {
+    font: inherit;
+    cursor: pointer;
+    padding: 1rem 2rem;
+    border: 1px solid #ff7b25;
+    background-color: #feb236;
+    color: white;
+    border-radius: 8px;
+    margin-right: 1rem;
+  }
+  
+  .add-meal button:hover,
+  .add-meal button:active {
+    background-color: #ff7b25;
+    border-color: #feb236;
+  }
+  
+  .add-meal button.alternative {
+    color: #220131;
+    border-color: transparent;
+    background-color: transparent;
+  }
+  
+  .add-meal button.alternative:hover,
+  .add-meal button.alternative:active {
+    background-color: #ff7b25;
+  }

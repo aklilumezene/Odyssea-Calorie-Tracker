@@ -1,3 +1,4 @@
+import AddMeal from "./components/AddMeal"
 import Meals from "./components/Meals"
 
 function App() {
@@ -36,7 +37,7 @@ function App() {
 
   return (
     <div>
-      <h1>Hello React!</h1>
+      <AddMeal />
       <Meals data = {meals}/>
     </div>
 
