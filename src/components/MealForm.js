@@ -1,4 +1,3 @@
-import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import "./MealForm.css";
 
@@ -35,8 +34,20 @@ const MealForm = (props) => {
          setUserCalorie(newValue)
          console.log(`someone typed ${userCalorie}`)
      }
+
+     const onSubmitHandler = event => {
+         event.preventDefault();
+         const newMeal = {
+             timeStamp: userDate,
+             description: userDescription,
+             meal: userMeal,
+            calorie: userCalorie
+         }
+         console.log(newMeal)
+     }
+
     return (
-        <form>
+        <form onSubmit = {onSubmitHandler}>
             <div className="add-meal__elements">
                 <div className="add-meal__element">
                     <label>Date</label>
