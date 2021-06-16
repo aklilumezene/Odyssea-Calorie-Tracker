@@ -43,7 +43,12 @@ const MealForm = (props) => {
              meal: userMeal,
             calorie: userCalorie
          }
-         console.log(newMeal)
+         console.log("My new meal: ", newMeal)
+         console.log("Resetting form data")
+         setUserDate("")
+         setUserDescription("")
+         setUserMeal("")
+         setUserCalorie("")
      }
 
     return (
@@ -51,19 +56,19 @@ const MealForm = (props) => {
             <div className="add-meal__elements">
                 <div className="add-meal__element">
                     <label>Date</label>
-                    <input type="datetime-local" onChange={dateChangedHandler}/>
+                    <input type="datetime-local" value = {userDate} onChange={dateChangedHandler}/>
                 </div>
                 <div className="add-meal__element">
                     <label>Meal</label>
-                    <input type="text" onChange={mealChangedHandler} />
+                    <input type="text" value = {userMeal} onChange={mealChangedHandler} />
                 </div>
                 <div className="add-metric__element">
                     <label>Description</label>
-                    <input type="text" onChange={descriptionChangedHandler} />
+                    <input type="text" value = {userDescription} onChange={descriptionChangedHandler} />
                 </div>
                 <div className="add-meal__element">
                     <label>Calorie</label>
-                    <input type="number" min="0" step="1" onChange={calorieChangedHandler} />
+                    <input type="number" value = {userCalorie} min="0" step="1" onChange={calorieChangedHandler} />
                 </div>
 
             </div>
