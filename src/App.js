@@ -1,5 +1,5 @@
-import AddMeal from "./components/AddMeal"
-import Meals from "./components/Meals"
+import AddMeal from "./components/EditMealItem/AddMeal"
+import Meals from "./components/MealItem/Meals"
 
 function App() {
   const meals = [
