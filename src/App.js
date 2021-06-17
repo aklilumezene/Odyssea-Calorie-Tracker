@@ -42,7 +42,6 @@ function App() {
   return (
     <div>
       <AddMeal onAddMeal = {addedMealHandler} />
-      <AddMeal />
       <Meals data = {meals}/>
     </div>
 
