@@ -1,4 +1,5 @@
 import AddMeal from "./components/EditMealItem/AddMeal"
+import FilterMetrics from "./components/FilterMeals/FilterMeals"
 import Meals from "./components/MealItem/Meals"
 
 function App() {
@@ -39,9 +40,14 @@ function App() {
     console.log("added a new meal by someone ", meal)
   }
 
+  const newStartDateSetHandler = (startDate) => {
+      console.log("start date set to ", startDate)
+  }
+
   return (
     <div>
       <AddMeal onAddMeal = {addedMealHandler} />
+      <FilterMetrics onSetStarDate = {newStartDateSetHandler} />
       <Meals data = {meals}/>
     </div>
 
