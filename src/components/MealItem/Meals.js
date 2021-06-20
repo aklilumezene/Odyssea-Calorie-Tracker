@@ -5,13 +5,13 @@ import Card from "../UI/Card";
 const Meals = (props) => {
   return (
     <Card className="meals">
-      {props.data.map((item, index) => {
+      {props.data.map(item => {
         return (
           <MealItem
-            date={props.data[index].timestamp}
-            meal={props.data[index].meal}
-            description={props.data[index].description}
-            calorie={props.data[index].calorie}
+            date={item.timestamp}
+            meal={item.meal}
+            description={item.description}
+            calorie={item.calorie}
           />
         );
       })}
