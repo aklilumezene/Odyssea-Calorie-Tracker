@@ -8,9 +8,9 @@ const Meals = (props) => {
 
     const filteredItems = props.data.filter( item => {
         return (
-            item.date.getYear() === date.getYear() &&
-            item.date.getMonth() === date.getMonth() &&
-            item.date.getDate() === date.getDate())
+            item.timestamp.getYear() === date.getYear() &&
+            item.timestamp.getMonth() === date.getMonth() &&
+            item.timestamp.getDate() === date.getDate())
     })
    return (
     <Card className="meals">
