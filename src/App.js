@@ -42,10 +42,10 @@ import {useState} from "react"
 
   const addedMealHandler = (meal) => {
     console.log("added a new meal by someone ", meal)
-    setMeals(
-      [...meals, meal]
-    );
-    console.log("My metrics are ", meals)
+    // we use the previous state so DO NOT USE THE SIMPLE setMeals!!!
+    // setMeals([...meals, meal ]);
+    // Instead use the setMeals that knows about the previous state
+    setMeals((prevMeals)=>{ return [...prevMeals, meal] });
   }
 
   const newStartDateSetHandler = (startDate) => {
