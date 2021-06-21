@@ -8,6 +8,7 @@ const Meals = (props) => {
       {props.data.map(item => {
         return (
           <MealItem
+          key={item.id}
             date={item.timestamp}
             meal={item.meal}
             description={item.description}

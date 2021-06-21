@@ -38,6 +38,7 @@ const MealForm = (props) => {
      const onSubmitHandler = event => {
          event.preventDefault();
          const newMeal = {
+             id: Math.random(),
              timeStamp: userDate,
              description: userDescription,
              meal: userMeal,
