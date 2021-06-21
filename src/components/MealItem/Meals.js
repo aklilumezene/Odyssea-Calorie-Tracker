@@ -3,7 +3,8 @@ import MealItem from "./MealItem";
 import Card from "../UI/Card";
 
 const Meals = (props) => {
-  return (
+   console.log("Filtering on", props.filterDate)
+   return (
     <Card className="meals">
       {props.data.map(item => {
         return (

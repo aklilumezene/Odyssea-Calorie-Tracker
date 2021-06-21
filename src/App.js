@@ -44,6 +44,7 @@ import {useState} from "react"
   function App() {
 
   const [meals, setMeals] = useState(startupMeals)
+  const [startDate, setStartDate] = useState("")
 
   const addedMealHandler = (meal) => {
     console.log("added a new meal by someone ", meal)
@@ -55,13 +56,14 @@ import {useState} from "react"
 
   const newStartDateSetHandler = (startDate) => {
       console.log("start date set to ", startDate)
+      setStartDate(startDate);
   }
 
   return (
     <div>
       <AddMeal onAddMeal = {addedMealHandler} />
-      <FilterMetrics onSetStarDate = {newStartDateSetHandler} />
-      <Meals data = {meals}/>
+      <FilterMetrics startDate = {startDate} onSetStarDate = {newStartDateSetHandler} />
+      <Meals filterDate={startDate} data={meals}/>
     </div>
 
   );
