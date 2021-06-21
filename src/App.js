@@ -1,9 +1,9 @@
 import AddMeal from "./components/EditMealItem/AddMeal"
 import FilterMetrics from "./components/FilterMeals/FilterMeals"
 import Meals from "./components/MealItem/Meals"
+import {useState} from "react"
 
-function App() {
-  const meals = [
+  const startupMeals = [
     {
       timestamp: new Date(2021, 4, 12, 12, 39, 0, 0),
       description: "100g Burger",
@@ -36,8 +36,16 @@ function App() {
     }
   ]
 
+  function App() {
+
+  const [meals, setMeals] = useState(startupMeals)
+
   const addedMealHandler = (meal) => {
     console.log("added a new meal by someone ", meal)
+    setMeals(
+      [...meals, meal]
+    );
+    console.log("My metrics are ", meals)
   }
 
   const newStartDateSetHandler = (startDate) => {
@@ -52,6 +60,6 @@ function App() {
     </div>
 
   );
-}
+  }
 
 export default App;
