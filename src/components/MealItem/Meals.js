@@ -15,6 +15,10 @@ const Meals = (props) => {
    return (
     <Card className="meals">
       {
+        filteredItems.length === 0 
+        ?
+        <p>No data on that date</p>
+        :
       filteredItems.map(item => {
         return (
           <MealItem
