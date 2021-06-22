@@ -44,7 +44,7 @@ import {useState} from "react"
   function App() {
 
   const [meals, setMeals] = useState(startupMeals)
-  const [startDate, setStartDate] = useState("21-05-13")
+  const [startDate, setStartDate] = useState("2021-05-12")
 
   const addedMealHandler = (meal) => {
     console.log("added a new meal by someone ", meal)
