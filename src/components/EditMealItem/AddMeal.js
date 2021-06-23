@@ -1,5 +1,6 @@
 import "./AddMeal.css";
 import MealForm from "./MealForm";
+import ErrorModal from "../UI/ErrorModal"
 
 const AddMeal = (props) => {
     const addedMealHandler = (meal) => {
@@ -14,8 +15,10 @@ const AddMeal = (props) => {
         props.onAddMeal(meal)
         return true;
     }
+   
     return (
         <div className="add-meal">
+            <ErrorModal title="An error occurred " message="The error is related to validation"/>
             <MealForm onAddMeal = {addedMealHandler} />
         </div>
     )
