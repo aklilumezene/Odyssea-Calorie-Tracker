@@ -39,7 +39,7 @@ const MealForm = (props) => {
          event.preventDefault();
          const newMeal = {
              id: Math.random(),
-             timeStamp: userDate,
+             timeStamp: new Date(userDate),
              description: userDescription,
              meal: userMeal,
             calorie: userCalorie
