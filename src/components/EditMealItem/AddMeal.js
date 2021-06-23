@@ -4,7 +4,15 @@ import MealForm from "./MealForm";
 const AddMeal = (props) => {
     const addedMealHandler = (meal) => {
         console.log("A new metric given to be added ", meal)
-          props.onAddMeal(meal)
+        if (meal.developer.trim().length === 0 ||
+            meal.project.trim().length === 0 ||
+            meal.count.trim().length === 0 ) {
+            // invalid data
+            return false;
+        }
+          
+        props.onAddMeal(meal)
+        return true;
     }
     return (
         <div className="add-meal">
