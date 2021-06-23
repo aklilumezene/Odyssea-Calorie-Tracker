@@ -1,5 +1,5 @@
 import "./Meals.css";
-import MealItem from "./MealItem";
+import MealsList from "./MealsList.js"
 import Card from "../UI/Card";
 
 const Meals = (props) => {
@@ -14,23 +14,9 @@ const Meals = (props) => {
     })
    return (
     <Card className="meals">
-      {
-        filteredItems.length === 0 
-        ?
-        <p>No data on that date</p>
-        :
-      filteredItems.map(item => {
-        return (
-          <MealItem
-          key={item.id}
-            date={item.timestamp}
-            meal={item.meal}
-            description={item.description}
-            calorie={item.calorie}
-          />
-        );
-      })
-      }
+      
+      <MealsList data={filteredItems}/>
+      
     </Card>
   );
 };
