@@ -37,6 +37,10 @@ const MealForm = (props) => {
 
      const onSubmitHandler = event => {
          event.preventDefault();
+         if (userDescription.trim().length > 0 &&
+            userMeal.trim().length > 0 &&
+            userCalorie.trim().length > 0 &&
+            userDate.trim().length > 0) {
          const newMeal = {
              id: Math.random(),
              timeStamp: new Date(userDate),
@@ -53,6 +57,10 @@ const MealForm = (props) => {
          setUserMeal("")
          setUserCalorie("")
      }
+    else {
+        console.log("Error found during validation!!!!")
+    }
+  }
 
     return (
         <form onSubmit = {onSubmitHandler}>
@@ -82,4 +90,4 @@ const MealForm = (props) => {
     )
 }
 
-export default MealForm;
+export default MealForm
