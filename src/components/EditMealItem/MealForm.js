@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./MealForm.css";
+import Input from "../UI/Input";
 
 const MealForm = (props) => {
   const [userDate, setUserDate] = useState("");
@@ -58,14 +59,14 @@ const MealForm = (props) => {
   return (
     <form onSubmit={onSubmitHandler}>
       <div className="add-meal__elements">
-        <div className="add-meal__element">
-          <label>Date</label>
-          <input
-            type="datetime-local"
-            value={userDate}
-            onChange={dateChangedHandler}
-          />
-        </div>
+        <Input
+          className="add-metric__element"
+          labelText="Date"
+          id="date"
+          type="datetime-local"
+          value={userDate}
+          onChange={dateChangedHandler}
+        />
         <div className="add-meal__element">
           <label>Meal</label>
           <input type="text" value={userMeal} onChange={mealChangedHandler} />
