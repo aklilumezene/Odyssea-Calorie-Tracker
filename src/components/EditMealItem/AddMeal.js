@@ -7,11 +7,17 @@ const AddMeal = (props) => {
     const [error, setError] = useState()
     const addedMealHandler = (meal) => {
         console.log("A new metric given to be added ", meal)
-        if (meal.developer.trim().length === 0 ||
-            meal.project.trim().length === 0 ||
-            meal.count.trim().length === 0 ) {
-                setError("Error data detected.")
-            // invalid data
+        const mandatoryValue = " is mandatory"
+        if (meal.description.trim().length === 0) {
+            setError("Description type is " + mandatoryValue)
+            return false;
+        }
+         if(meal.meal.trim().length === 0) {
+              setError("The Meal type is " + mandatoryValue)
+              return false;
+            }
+        if(meal.calorie.trim().length === 0 ) {
+              setError("Calorie index is " + mandatoryValue)
             return false;
         }
           
