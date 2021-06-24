@@ -62,10 +62,12 @@ const MealForm = (props) => {
         <Input
           className="add-metric__element"
           labelText="Date"
-          id="date"
-          type="datetime-local"
-          value={userDate}
-          onChange={dateChangedHandler}
+          input={{
+            id: "date",
+            type: "datetime-local",
+            value: userDate,
+            onChange: dateChangedHandler,
+          }}
         />
         <div className="add-meal__element">
           <label>Meal</label>
