@@ -69,28 +69,35 @@ const MealForm = (props) => {
             onChange: dateChangedHandler,
           }}
         />
-        <div className="add-meal__element">
-          <label>Meal</label>
-          <input type="text" value={userMeal} onChange={mealChangedHandler} />
-        </div>
-        <div className="add-metric__element">
-          <label>Description</label>
-          <input
-            type="text"
-            value={userDescription}
-            onChange={descriptionChangedHandler}
-          />
-        </div>
-        <div className="add-meal__element">
-          <label>Calorie</label>
-          <input
-            type="number"
-            value={userCalorie}
-            min="0"
-            step="1"
-            onChange={calorieChangedHandler}
-          />
-        </div>
+        <Input className="add-meal__element"
+                    labelText="Description"
+                    input={{
+                        id: "date",
+                        type: "text",
+                        value: userDescription,
+                        onChange: descriptionChangedHandler
+                    }}
+                />
+        <Input className="add-meal__element"
+                    labelText="Meal"
+                    input={{
+                        id: "Meal",
+                        type: "text",
+                        value: userMeal,
+                        onChange: mealChangedHandler
+                    }}
+                />
+        <Input className="add-meal__element"
+                    labelText="Calorie"
+                    input={{
+                        id: "date",
+                        type: "number",
+                        value: userCalorie,
+                        onChange: calorieChangedHandler,
+                        min: "0",
+                        step: "1"
+                    }}
+                />
       </div>
       <div className="add-meal__actions">
         <button type="submit">Add Meal</button>
