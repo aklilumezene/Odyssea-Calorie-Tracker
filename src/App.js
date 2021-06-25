@@ -1,6 +1,8 @@
 import AddMeal from "./components/EditMealItem/AddMeal"
 import FilterMetrics from "./components/FilterMeals/FilterMeals"
 import Meals from "./components/MealItem/Meals"
+import Login from "./components/Login/Login"
+import Modal from "./components/UI/Modal"
 import {useState} from "react"
 
   const startupMeals = [
@@ -61,6 +63,7 @@ import {useState} from "react"
 
   return (
     <div>
+      <Modal><Login /></Modal>
       <AddMeal onAddMeal = {addedMealHandler} />
       <FilterMetrics startDate = {startDate} onSetStarDate = {newStartDateSetHandler} />
       <Meals filterDate={startDate} data={meals}/>
